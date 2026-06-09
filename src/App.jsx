@@ -6,6 +6,8 @@ import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import CounterPage from "./pages/CounterPage";
 import RegisterPage from "./pages/RegisterPage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -16,7 +18,17 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/counter" element={<CounterPage />} />
-        <Route path="/register" element={<RegisterPage />} />; ;
+        <Route path="/register" element={<RegisterPage />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              {" "}
+              <Dashboard />{" "}
+            </ProtectedRoute>
+          }
+        />
+        ;
       </Routes>
     </BrowserRouter>
   );
