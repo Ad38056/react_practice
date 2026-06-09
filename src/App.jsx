@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage";
 // ...
+import ProductDetail from "./pages/ProductDetail";
+// ...
+<Route path="/products/:id" element={<ProductDetail />} />;
 <Route path="/register" element={<RegisterPage />} />;
 import Header from "./components/Header";
 import Home from "./pages/Home";
